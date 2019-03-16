@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
 
 int main()
 {
@@ -44,7 +42,7 @@ int main()
                 printf("\tStar Wars, 1977\n"); 
                 break;
             default:
-                printf("Hmm. I don't seem to know that.\n" );
+                printf("\tHmm. I don't seem to know that.\n" );
         }
 
     return 0;
