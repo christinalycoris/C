@@ -13,41 +13,52 @@ int main()
 		printf("\n\t\t4. Multiplication "); 
 		printf("\n\t\t5. Division (A into B) "); 
 		printf("\n\t\t6. Division (B into A) "); 
+		printf("\n\t\t7. Exit "); 
 		printf("\n\n\tYour selection is: "); 
 		scanf("%d", &operation);
+		
+		if (operation < 1 || operation > 7) {
+			printf("\n\tHmm. I don't seem to know that.\n" );
+		}
+		else {
+			if ( operation == 7 ) { 
+				printf("\n\tGoodbye. :)\n" );
+			}
+			else {
+				printf("\n\tInput first number (A): "); 
+				scanf("%f", &a);
+				printf("\tInput second number (B): "); 
+				scanf("%f", &b);
 
-		printf("\n\tInput first number (A): "); 
-		scanf("%f", &a);
-		printf("\tInput second number (B): "); 
-		scanf("%f", &b);
-
-		switch(operation) {
-			case 1: 
-				c=a+b; 
-				printf("\t\t\t\t %0.2f + %0.2f = %0.2f\n", a,b,c); 
-				break;
-			case 2: 
-				c=b-a; 
-				printf("\t\t\t\t %0.2f - %0.2f = %0.2f\n", b,a,c); 
-				break;
-			case 3: 
-				c=a-b; 
-				printf("\t\t\t\t %0.2f - %0.2f = %0.2f\n", a,b,c); 
-				break;
-			case 4: 
-				c=a*b; 
-				printf("\t\t\t\t %0.2f × %0.2f = %0.2f\n", a,b,c); 
-				break;
-			case 5: 
-				c=b/a; 
-				printf("\t\t\t\t %0.2f ÷ %0.2f = %0.2f\n", b,a,c); 
-				break;
-			case 6: 
-				c=a/b; 
-				printf("\t\t\t\t %0.2f ÷ %0.2f = %0.2f\n", a,b,c); 
-				break;
-			default: 
-				printf("\n\tHmm. I don't seem to know that.\n" );
+				switch(operation) {
+					case 1: 
+						c=a+b; 
+						printf("\n\t\t\t\t %0.2f + %0.2f = %0.2f\n", a,b,c); 
+						break;
+					case 2: 
+						c=b-a; 
+						printf("\n\t\t\t\t %0.2f - %0.2f = %0.2f\n", b,a,c); 
+						break;
+					case 3: 
+						c=a-b; 
+						printf("\n\t\t\t\t %0.2f - %0.2f = %0.2f\n", a,b,c); 
+						break;
+					case 4: 
+						c=a*b; 
+						printf("\n\t\t\t\t %0.2f × %0.2f = %0.2f\n", a,b,c); 
+						break;
+					case 5: 
+						c=b/a; 
+						printf("\n\t\t\t\t %0.2f ÷ %0.2f = %0.2f\n", b,a,c); 
+						break;
+					case 6: 
+						c=a/b; 
+						printf("\n\t\t\t\t %0.2f ÷ %0.2f = %0.2f\n", a,b,c); 
+						break;
+					default: 
+						printf("\n\tHmm. I don't seem to know that.\n" );
+				}
+			}
 		}
 
     return 0;
