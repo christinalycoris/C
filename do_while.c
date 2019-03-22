@@ -3,7 +3,7 @@
 int main () {
 
    int count;
-   int x,y;
+   int x,y,z;
 
    count=0;
    
@@ -11,10 +11,12 @@ int main () {
    scanf("%d", &x);
    printf("Input end of loop: "); 
    scanf("%d", &y);
+   printf("Input step of loop: "); 
+   scanf("%d", &z);
 
    do {
       printf("The number is: %d\n", x);
-      x++;
+      x=x+z;
       count++;
    }while( x <= y );
    
