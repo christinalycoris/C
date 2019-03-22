@@ -2,7 +2,8 @@
 
 int main()
 {
-    int i, n, term1 = 0, term2 = 1, nextTerm;
+    int i, n; 
+    double term1 = 0, term2 = 1, nextTerm;
 
     printf("Enter the number of terms: ");
     scanf("%d", &n);
@@ -11,7 +12,7 @@ int main()
 
     for (i = 1; i <= n; ++i)
     {
-        printf("\n\t\t%d", term1);
+        printf("\n\t\t%0.0f", term1);
         nextTerm = term1 + term2;
         term1 = term2;
         term2 = nextTerm;
